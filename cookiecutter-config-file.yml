@@ -1,0 +1,10 @@
+# This file contains values from Cookiecutter
+
+default_context:
+  project_name: "social-regexp"
+  project_description: "Regexps for social data"
+  organization: "TezRomacH"
+  license: "MIT"
+  version: "0.1.0"
+  github_name: "TezRomacH"
+  email: "tez.romach@gmail.com"
