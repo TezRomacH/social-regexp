@@ -1,5 +1,5 @@
 # type: ignore[attr-defined]
-"""Regexps for social data"""
+"""Regexps for social data."""
 
 try:
     from importlib.metadata import PackageNotFoundError, version

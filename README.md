@@ -26,7 +26,7 @@ pip install social-regexp
 
 ```python
 >>> import social_regexp as sre
->>> text = "Hi, I am @TezRomacH"
+>>> text = "Hi, my Twitter is @tez_romach"
 
 >>> sre.remove_mentions(text, sre.MENTION_TOKEN)
 "Hi, I am <men>"
