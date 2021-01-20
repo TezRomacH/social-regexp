@@ -19,7 +19,7 @@ Regexps for social data
 ## Installation
 
 ```bash
-pip install social-regexp
+pip install -U social-regexp
 ```
 
 ## Methods
