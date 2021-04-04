@@ -56,6 +56,8 @@ _blank_spaces = re.compile(r"\s{2,}|\t|\\n|\\\\n|\\u200a|\\u200d|\\u200c")
 
 _mentions = re.compile(r"@[\w\._]*")
 
+_hashtags = re.compile(r"(\#)([\w_]*)")
+
 _phones = re.compile(
     r"(\+?\d{1,3}[\s.-]?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?(\d{4}|\d{2}[\s.-]\d{2})"
 )

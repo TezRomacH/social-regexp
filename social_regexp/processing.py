@@ -10,6 +10,7 @@ from social_regexp.constants import (
     PHONE_TOKEN,
     URL_TOKEN,
     _blank_spaces,
+    _hashtags,
     _mentions,
     _phones,
     _single_letter_word,
@@ -48,6 +49,11 @@ def mentions() -> Pattern[str]:
     return _mentions
 
 
+def hashtags() -> Pattern[str]:
+    """Returns a pattern to match mentions from Twitter or Instagram."""
+    return _hashtags
+
+
 def phones() -> Pattern[str]:
     """Returns a pattern to match phone numbers."""
     return _phones
@@ -66,6 +72,11 @@ def remove_spaces_before_punctuation(text: str) -> str:
 def remove_punctuation(text: str) -> str:
     """Return new string without punctuations."""
     return text.translate(str.maketrans("", "", string.punctuation))
+
+
+def remove_hashtags(text: str, repl: str = "") -> str:
+    """Return new string with replaced Twitter/Instagram mentions to `repl`."""
+    return re.sub(pattern=_hashtags, repl=repl, string=text)
 
 
 def remove_mentions(text: str, repl: str = "") -> str:
@@ -93,6 +104,7 @@ def preprocess_text(text: str) -> str:
     result = remove_mentions(text, repl=MENTION_TOKEN)
     result = remove_phones(result, repl=PHONE_TOKEN)
     result = remove_urls(result, repl=URL_TOKEN)
+    result = remove_hashtags(result, repl=HASH_TOKEN)
     result = remove_blank_spaces(result).strip()
     result = remove_spaces_before_punctuation(result)
 
