@@ -127,4 +127,5 @@ __all__ = [
     "remove_blank_spaces",
     "remove_phones",
     "preprocess_text",
+    "remove_hashtags",
 ]

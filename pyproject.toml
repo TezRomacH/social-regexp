@@ -6,7 +6,7 @@ build-backend = "poetry.masonry.api"
 
 [tool.poetry]
 name = "social-regexp"
-version = "0.1.4"
+version = "0.2.1"
 description = "Regexps for social data"
 readme = "README.md"
 authors = [
